@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Atomic Habbit",
+        "price": 790,
+        "stock": 10
+    },
+    {
+        "id": 2,
+        "name": "The magic of thinking big",
+        "price": 350,
+        "stock": 5
+    },
+    {
+        "id": 3,
+        "name": "Ask and it is given",
+        "price": 690,
+        "stock": 9
+    },
+    {
+        "id": 4,
+        "name": "Emotional intelligence",
+        "price": 590,
+        "stock": 11
+    },
+    {
+        "id": 5,
+        "name": "Think and grow rich",
+        "price": 250,
+        "stock": 19
+    }
+]

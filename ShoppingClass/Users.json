@@ -1,0 +1,43 @@
+{
+    "user1": {
+        "id": 1,
+        "name": "m",
+        "password": "1234",
+        "cart": []
+    },
+    "user2": {
+        "id": 2,
+        "name": "n",
+        "password": "2345",
+        "cart": []
+    },
+    "ccc": {
+        "id": 3,
+        "name": "ccccc",
+        "password": "12345",
+        "cart": []
+    },
+    "cchef": {
+        "id": 4,
+        "name": "ccc",
+        "password": "1111",
+        "cart": [
+            4,
+            1,
+            4,
+            2
+        ]
+    },
+    "phavida": {
+        "id": 5,
+        "name": "ppphrt",
+        "password": "120946",
+        "cart": []
+    },
+    "mue": {
+        "id": 6,
+        "name": "nongmue",
+        "password": "2222",
+        "cart": []
+    }
+}
