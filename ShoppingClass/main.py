@@ -49,4 +49,5 @@ if __name__ == '__main__':
         user.product_out_cart(remove_product)
 
     # Display data
+
     user.show_cart(user_1)
