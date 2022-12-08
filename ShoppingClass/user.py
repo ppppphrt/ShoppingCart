@@ -3,59 +3,58 @@ import json
 
 class User:
     def __init__(self):
-        self._userId = None
-        self._name = None
-        self._cart = None
-        self.username = None
+        self._userId = 0
+        self._name = ""
+        self._cart = []
+        self.username = ""
 
     data = {
-    "user1": {
-        "id": 1,
-        "name": "m",
-        "password": "1234",
-        "cart": [
+        "user1": {
+            "id": 1,
+            "name": "m",
+            "password": "1234",
+            "cart": [
 
-        ]
-    },
-    "user2": {
-        "id": 2,
-        "name": "n",
-        "password": "2345",
-        "cart": [
+            ]
+        },
+        "user2": {
+            "id": 2,
+            "name": "n",
+            "password": "2345",
+            "cart": [
 
-        ]
-    },
-    "ccc": {
-        "id": 3,
-        "name": "ccccc",
-        "password": "12345",
-        "cart": []
-    },
-    "cchef": {
-        "id": 4,
-        "name": "ccc",
-        "password": "1111",
-        "cart": [
+            ]
+        },
+        "ccc": {
+            "id": 3,
+            "name": "ccccc",
+            "password": "12345",
+            "cart": []
+        },
+        "cchef": {
+            "id": 4,
+            "name": "ccc",
+            "password": "1111",
+            "cart": [
 
-
-        ]
-    },
-    "phavida": {
-        "id": 5,
-        "name": "ppphrt",
-        "password": "120946",
-        "cart": []
-    },
-    "mue": {
-        "id": 6,
-        "name": "nongmue",
-        "password": "2222",
-        "cart": []
+            ]
+        },
+        "phavida": {
+            "id": 5,
+            "name": "ppphrt",
+            "password": "120946",
+            "cart": []
+        },
+        "mue": {
+            "id": 6,
+            "name": "nongmue",
+            "password": "2222",
+            "cart": []
+        }
     }
-}
     try:
         with open('Users.json', 'r') as file:
-            user  = json.load(file)  # Load data products from Database/Product.json
+            user = json.load(file)  # Load data products from Database/Product.json
     except FileNotFoundError:
         with open("Users.json", "w") as file:
             json.dump(data, file, indent=4)
@@ -76,17 +75,17 @@ class User:
             else:
                 print('Username or Password is incorrect')
 
-    def register(self,username, name, password):
+    def register(self, username, name, password):
         try:
             with open('Users.json', 'r') as file:
                 user = json.load(file)
 
             new_user = {
-                username : { "id": len(user)+1,
-                             "name": name,
-                             "password": password,
-                             "cart": []
-                }
+                username: {"id": len(user) + 1,
+                           "name": name,
+                           "password": password,
+                           "cart": []
+                           }
 
             }
         except FileNotFoundError:
@@ -100,22 +99,20 @@ class User:
                                }
 
                 }
-                json.dump(user,file,indent=4)
+                json.dump(user, file, indent=4)
         else:
             user.update(new_user)
             with open('Users.json', 'w') as file:
-                json.dump(user,file,indent=4)
+                json.dump(user, file, indent=4)
 
-
-    def buy(self,username,id):
+    def buy(self, username, id):
         with open('Users.json', 'r') as file:
             user = json.load(file)
             user[username]["cart"].append(id)
         with open('Users.json', 'w') as file:
             json.dump(user, file, indent=4)
 
-
-
-
-
-
+    def show_buy(self, username):
+        with open('Users.json', 'r') as file:
+            user = json.load(file)
+            return user[username]["cart"]

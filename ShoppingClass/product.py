@@ -42,12 +42,12 @@ class Product:
             with open("Product.json", "w") as file:
                 json.dump(data, file, indent=4)
 
-    def products(self, pid=None):
+    def products(self, product_id=None):
 
-        if pid is None:
+        if product_id is None:
             return self._products
 
-        uniq_pid = sorted(set(pid))  # Drop duplicate then sort ascending
+        uniq_pid = sorted(set(product_id))  # Drop duplicate then sort ascending
         products_output = []
         for p in self._products:  # Interate products object data
             if p['id'] == uniq_pid[0]:  # If id from interate is equal `uniq_pid` (^ that ascending before)
@@ -66,7 +66,8 @@ class Product:
         print("------------------------------------------------------------------------------------")
         for product in self._products:
             print("{pid:5}{name:^40}{price:>11,.2f}{stock:>21}".format(pid=product['id'], name=product['name'],
-                                                            price=float(product['price']), stock=product['stock']))
+                                                                       price=float(product['price']),
+                                                                       stock=product['stock']))
         print("---------------------------------------------------------------------------------\n\n")
 
     def update_stock(self, product):

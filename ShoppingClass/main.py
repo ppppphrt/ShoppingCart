@@ -24,7 +24,6 @@ if __name__ == '__main__':
             print('Please input again.')
             choice = input('(r) for Register or (l) for login: ')
 
-
     user.show_products()  # Display all products in the market
     # Add products to my cart
     while True:
@@ -35,12 +34,12 @@ if __name__ == '__main__':
             break
         else:
             user.buy(user_1, product)
-            user.update_stock(product)
             user.product_to_cart(product)
-
+            user.update_stock(product)
+            # user.show_buy(user_1)
 
     # user.show_products()  # Display all products in the market
-    user.show_cart()  # Display all products in my cart
+    user.show_cart(user_1)  # Display all products in my cart
 
     # Drop products from my cart
     remove_product = int(input('Please enter id of your book to remove or 0 to quit: '))
@@ -50,6 +49,4 @@ if __name__ == '__main__':
         user.product_out_cart(remove_product)
 
     # Display data
-    user.show_cart()
-
-
+    user.show_cart(user_1)
