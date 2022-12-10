@@ -59,21 +59,25 @@ class User:
         with open("Users.json", "w") as file:
             json.dump(data, file, indent=4)
 
-    # Read users data from `Users.json` file
-
     def login(self, username, password):
-        with open('Users.json', 'r') as file:
-            user = json.load(file)
+        while True:
+            with open('Users.json', 'r') as file:
+                user = json.load(file)
 
-        if username in user:
-            if user[username]["password"] == password:
-                self._userId = user[username]['id']  # Collect data
-                self._name = user[username]['name']
-                self._cart = user[username]['cart']
-                self.username = username
-                print(f'Login success !\n\nWelcome {self._name}\n\n')
-            else:
-                print('Username or Password is incorrect')
+            if username in user:
+                if user[username]["password"] == password:
+                    self._userId = user[username]['id']  # Collect data
+                    self._name = user[username]['name']
+                    self._cart = user[username]['cart']
+                    self.username = username
+                    print(f'Login success !\n\nWelcome {self._name}\n\n')
+                    break
+                else:
+                    print('Username or Password is incorrect')
+                    print('Please enter again.')
+                    input('Enter your username: ')
+                    input('Enter your password: ')
+                    break
 
     def register(self, username, name, password):
         try:
@@ -88,6 +92,8 @@ class User:
                            }
 
             }
+
+
         except FileNotFoundError:
             with open('Users.json', 'w') as file:
                 user = {
@@ -100,12 +106,13 @@ class User:
 
                 }
                 json.dump(user, file, indent=4)
+
         else:
             user.update(new_user)
             with open('Users.json', 'w') as file:
                 json.dump(user, file, indent=4)
 
-    def buy(self, username, id):
+    def buy_to_cart(self, username, id):
         with open('Users.json', 'r') as file:
             user = json.load(file)
             user[username]["cart"].append(id)
