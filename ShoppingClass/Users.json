@@ -16,27 +16,11 @@
     },
     "boo": {
         "id": 3,
-<<<<<<< HEAD
-        "name": "ccccc",
-        "password": "12345",
-        "cart": [
-            2,
-            0,
-            0
-        ]
-    },
-    "cchef": {
-        "id": 7,
-        "name": "ccc",
-        "password": "2222",
-        "cart": []
-=======
         "name": "booboo",
         "password": "5555",
         "cart": [
             1
         ]
->>>>>>> test_list_of_obj
     },
     "ppppphrt": {
         "id": 4,
@@ -44,6 +28,14 @@
         "password": "1414",
         "cart": [
             2
+        ]
+    },
+    "mj": {
+        "id": 5,
+        "name": "m",
+        "password": "1212",
+        "cart": [
+            5
         ]
     }
 }

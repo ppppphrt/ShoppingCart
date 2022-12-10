@@ -38,14 +38,12 @@ Store all information of products (books) include ID of the book, name, price an
 ```json
  
 {
-
         "id": 1,
         "name": "Atomic Habbit",
         "price": 790,
         "stock": 17
     },
-    
-{
+    {
         "id": 2,
         "name": "The magic of thinking big",
         "price": 350,
@@ -86,4 +84,3 @@ Collect information for Login, Register and products in the cart.
 #### Condition
 1. Member id <span style="color:red">Do not duplicate</span>
 2. If wanting to add/delete members, edit within the Users.json file.
-

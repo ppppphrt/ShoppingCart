@@ -9,11 +9,7 @@
         "id": 2,
         "name": "The magic of thinking big",
         "price": 350,
-<<<<<<< HEAD
-        "stock": 2
-=======
-        "stock": 13
->>>>>>> test_list_of_obj
+        "stock": 12
     },
     {
         "id": 3,
@@ -25,12 +21,12 @@
         "id": 4,
         "name": "Emotional intelligence",
         "price": 590,
-        "stock": 15
+        "stock": 14
     },
     {
         "id": 5,
         "name": "Think and grow rich",
         "price": 250,
-        "stock": 15
+        "stock": 14
     }
 ]
