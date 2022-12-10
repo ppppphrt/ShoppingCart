@@ -6,7 +6,7 @@ class Product:
         data = [
             {
                 "id": 1,
-                "name": "Atomic Habbit",
+                "name": "Atomic Habit",
                 "price": 790,
                 "stock": 11
             },

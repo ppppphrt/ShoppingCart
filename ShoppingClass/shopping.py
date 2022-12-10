@@ -38,6 +38,7 @@ class Shopping(CartAction, Product, User):
     # Get detail of products ( id is the same as the cart ).
     def cart_detail(self, user):
         item_incart = User().show_buy(username=user)
+        # items_remove = CartAction().show_remove(username=user)
         cart_products_count = Counter(item_incart)  # Counting number of each the products in the cart.
         cart = self.products(item_incart)
         for i, c in enumerate(cart):
