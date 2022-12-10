@@ -84,3 +84,7 @@ Collect information for Login, Register and products in the cart.
 #### Condition
 1. Member id <span style="color:red">Do not duplicate</span>
 2. If wanting to add/delete members, edit within the Users.json file.
+
+
+## GITHUB LINK ##
+https://github.com/ppppphrt/ShoppingCart.git
