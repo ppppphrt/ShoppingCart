@@ -27,18 +27,17 @@
         "id": 3,
         "name": "ccccc",
         "password": "12345",
-        "cart": []
+        "cart": [
+            2,
+            0,
+            0
+        ]
     },
     "cchef": {
-        "id": 4,
+        "id": 7,
         "name": "ccc",
-        "password": "1111",
-        "cart": [
-            4,
-            1,
-            4,
-            2
-        ]
+        "password": "2222",
+        "cart": []
     },
     "phavida": {
         "id": 5,
